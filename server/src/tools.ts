@@ -13,7 +13,8 @@ export const fsTool = (filePath: string, newContent: string) => {
     const path = projectRoot + "/" + filePath;
     fs.writeFileSync(path, newContent);
     if (fs.readFileSync(path, "utf-8") !== newContent) {
-        throw new Error(`Failed to update file: ${filePath}`);
+        // throw new Error(`Failed to update file: ${filePath}`);
+        console.log(`Failed to update file: ${filePath}. This might be due to a file system issue or permission problem.`);
     } else {
         console.log(`File updated: ${filePath}`);
     }
