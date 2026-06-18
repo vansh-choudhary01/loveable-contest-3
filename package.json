@@ -14,5 +14,8 @@
     "dev:server": "npm --workspace server run dev",
     "build": "npm --workspace server run build && npm --workspace client run build && npm --workspace project run build",
     "reset:project": "node scripts/reset-project.mjs"
+  },
+  "dependencies": {
+    "openai": "^6.44.0"
   }
 }
